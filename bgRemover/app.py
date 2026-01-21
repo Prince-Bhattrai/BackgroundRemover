@@ -3,6 +3,8 @@ from rembg import remove
 from PIL import Image
 import io
 from fastapi.middleware.cors import CORSMiddleware
+import os
+import uvicorn
 
 
 
@@ -32,6 +34,12 @@ async def home (image: UploadFile):
 @app.get("/")
 def test ():
     return {"Response":"App is running..."}
+
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  
+    uvicorn.run("app:app", host="0.0.0.0", port=port, workers=1)
 
 
 
