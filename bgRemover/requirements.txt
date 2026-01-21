@@ -5,3 +5,4 @@ rembg[cpu]==2.0.72
 pillow==12.1.0
 python-multipart==0.0.21
 requests==2.32.5
+
