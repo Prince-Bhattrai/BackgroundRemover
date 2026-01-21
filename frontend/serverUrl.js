@@ -1,1 +1,1 @@
-export const Server  = "http://localhost:4000"
+export const Server  = "https://bg-remover-backend-086q.onrender.com"
