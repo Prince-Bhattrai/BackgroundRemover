@@ -1,17 +1,14 @@
 from fastapi import FastAPI, Response, UploadFile
 from rembg import remove
-from PIL import Image
-import io
 from fastapi.middleware.cors import CORSMiddleware
 
-
-
-
 app = FastAPI()
+
 origins = [
     "http://localhost:5173",
     "http://localhost:4000",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://background-remover-neon.vercel.app"
 ]
 
 app.add_middleware(
@@ -22,18 +19,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# load model session once to make it faster
+from rembg import new_session
+session = new_session()
+
 @app.post("/remove-bg")
-async def home (image: UploadFile):
+async def remove_bg(image: UploadFile):
     data = await image.read()
-    output = remove(data=data)
+    output = remove(data=data, session=session)
     return Response(content=output, media_type="image/png")
 
 
-
 @app.get("/")
-def test ():
-    return {"Response":"App is running..."}
-
+def test():
+    return {"Response": "App is running..."}
 
 
 # if __name__ == "__main__":
