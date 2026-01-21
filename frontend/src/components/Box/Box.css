@@ -1,0 +1,166 @@
+.box{
+    display: flex;
+    /* justify-content: center; */
+    height: calc(100vh - 70px);
+    /* align-items: center; */
+    padding-top: 70px;
+   
+    
+}
+
+.box .left{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box .left input{
+    display: none;
+}
+
+.box .left .items{
+    background-color: white;
+    height: 300px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px 0px #b1b0b0;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+
+.box .left .items label{
+    font-size: 25px ;
+    padding: 20px 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color:#1877F2  ;
+    color: white;
+    
+
+}
+
+.box .left .items  p{
+    text-decoration: underline;
+    margin: 20px;
+}
+
+
+.box .right{
+    width: 50vw;
+    height: calc(100vh - 70px );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box .right video{
+    width: 50vw;
+    width: 330px;    
+}
+
+.box .left{
+    height: calc(100vh - 70px );
+}
+
+.box .right img{
+   width: 330px;
+}
+
+.box .right button{
+    padding: 15px 30px;
+    margin: 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+.box .right  .yes{
+    background-color: #1877F2;
+    
+}
+
+.box .right  .no{
+    background-color: #646464;
+}
+
+.box .download{
+    background-color: #1877F2;
+}
+
+.box .outer{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 60px 0px #1877F2;
+    border-radius: 50%;
+    animation: inout 1s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.box .inner{
+    width: 80px;
+    height: 80px;
+    border: 10px solid #1877F2;
+    border-radius: 50%;
+    border-top: 10px solid #FFFFFF;
+    animation: spinner 1s ease-in-out  infinite;
+}
+
+@keyframes inout{
+    0%{
+         box-shadow: 0px 0px 60px 0px #1877F2;
+    }
+    50%{
+         box-shadow: 0px 0px 0px 0px #1877F2;
+    }
+    100%{
+         box-shadow: 0px 0px 60px 0px #1877F2;
+    }
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+@media(max-width:760px){
+    .box{
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100vh;
+        gap: 40px;
+        overflow-x: hidden;
+    }
+    .box .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        padding-bottom: 30px;
+    }
+    .box .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        padding-top: 50px;
+    }
+}

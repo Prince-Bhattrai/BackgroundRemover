@@ -1,0 +1,77 @@
+.history{
+    padding: 100px 50px 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.history img{
+    width: 100%;
+    
+    position: relative;
+
+    
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.history .data{
+    width: 340px;
+    position: relative;
+    height: 350px;
+    box-shadow: 0px 0px 20px 0px #bdbaba;
+    border-radius: 20px;
+    border: 1px solid #c2c2c2;
+   
+}
+.history .data .actions{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+     padding: 20px;
+     cursor: pointer;
+
+}
+
+.history .data .actions p{
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.history .data .actions p:hover{
+    transform: scale(1.2);
+}
+
+.history .data .actions>:nth-child(1){
+    color: red;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center h1{
+    margin-top: 50vh;
+}
+
+@media(max-width:800px){
+    .history{
+        justify-content: space-around;
+    }
+
+    
+}
+
+
+@media (max-width:500px){
+    
+   .history .data{
+    width: 320px;
+   }
+}
