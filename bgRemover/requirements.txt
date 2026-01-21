@@ -1,7 +1,7 @@
 fastapi==0.128.0
 uvicorn==0.40.0
 gunicorn==21.2.0
-rembg==2.0.72
+rembg[cpu]==2.0.72
 pillow==12.1.0
 python-multipart==0.0.21
 requests==2.32.5
