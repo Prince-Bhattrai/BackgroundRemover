@@ -3,8 +3,7 @@ from rembg import remove
 from PIL import Image
 import io
 from fastapi.middleware.cors import CORSMiddleware
-# import os
-# import uvicorn
+
 
 
 
