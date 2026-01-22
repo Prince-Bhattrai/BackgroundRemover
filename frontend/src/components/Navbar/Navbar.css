@@ -133,3 +133,12 @@ nav .options button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
+@media (max-width:450px){
+    nav .options button{
+        font-size:12px;
+        padding:5px 5px;
+    }
+}
