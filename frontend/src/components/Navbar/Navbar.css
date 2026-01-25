@@ -3,8 +3,8 @@ nav {
     height: 70px;
     background-color: #FFFFFF;
     justify-content: space-between;
-    padding: 20px;
-    box-shadow: 0px 0px 15px 1px #dbdada ;
+    padding: 20px 20px 20px 10px;
+    box-shadow: 0px 0px 15px 1px #dbdada;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -35,28 +35,28 @@ nav .left ul {
 
 }
 
-nav ul li{
+nav ul li {
     font-weight: 600;
     cursor: pointer;
 }
 
-nav ul li:hover{
-    color:#4791f1 ;
+nav ul li:hover {
+    color: #4791f1;
 }
 
-nav .active{
+nav .active {
     color: #1e76e9;
     text-decoration: underline;
 
 }
 
-nav .right{
+nav .right {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav .right button{
+nav .right button {
     padding: 12px;
     margin: 0px 10px;
     border: none;
@@ -67,64 +67,65 @@ nav .right button{
     transition: 0.3s ease-in-out;
 }
 
-nav .right >:nth-child(1){
+nav .right>:nth-child(1) {
     border: 1px solid #444;
     background-color: white;
 }
 
-nav .right >:nth-child(1):hover{
+nav .right>:nth-child(1):hover {
     background-color: black;
     border: 1px solid white;
     color: white;
 }
-nav .right >:nth-child(2):hover{
+
+nav .right>:nth-child(2):hover {
     background-color: white;
     color: black;
     border: 1px solid black;
 
 }
 
-nav .right >:nth-child(2){
+nav .right>:nth-child(2) {
     background-color: black;
     color: white;
     border: 1px solid white;
 }
 
 
-nav .user-profile{
+nav .user-profile {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-nav .user-profile img{
+nav .user-profile img {
     height: 60px;
     width: 60px;
-    border-radius:50% ;
+    border-radius: 50%;
     position: relative;
     cursor: pointer;
-    
-    
+
+
 }
 
-nav .user-profile .right-user{
+nav .user-profile .right-user {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-nav .options{
+nav .options {
     position: absolute;
     right: 0;
     background-color: #FFFFFF;
     box-shadow: 0px 10px 20px 0px #bbb9b9;
     padding: 10px;
     border-radius: 10px;
-    
+
 }
 
-nav .options button{
+nav .options button {
     padding: 10px 15px;
     margin: 10px;
     background-color: red;
@@ -134,11 +135,16 @@ nav .options button{
     cursor: pointer;
 }
 
+@media (max-width:500px) {
+    nav .left img {
+        height: 60px;
+        width: 60px;
 
-
-@media (max-width:450px){
-    nav .options button{
-        font-size:12px;
-        padding:5px 5px;
+    }
+    nav .right button{
+        font-size: 12px;
+    }
+    nav ul li{
+        font-size: 12px;
     }
 }
